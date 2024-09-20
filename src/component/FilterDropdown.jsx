@@ -10,7 +10,7 @@ const FilterDropdown = () => {
   const [selectedReservoir, setSelectedReservoir] = useState(null);  // For storing selected reservoir
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/reservoirs/')
+    axios.get('https://balanced-connection-production.up.railway.app/api/reservoirs/')
       .then(response => {
         const transformedData = response.data.map(item => ({
           label: item.reservoir_name,  
